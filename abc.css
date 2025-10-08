@@ -1,0 +1,39 @@
+h1 {
+  color: rgb(24, 24, 198);
+  font-size: 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  border: 2em solid green;
+}
+h2 {
+  color: blueviolet;
+  font-size: 2em;
+}
+img {
+  border: 3em solid rgb(16, 185, 160);
+  margin: 20px;
+  padding: 1em;
+}
+p {
+  color: rgb(80, 97, 10);
+  font-size: 1em;
+  font-weight: 500;
+  font-style: initial;
+  line-height: 2em;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-family: 'Segoe UI';
+  text-align: justify; 
+}
+ul{
+  color: rgb(7, 48, 49);
+  font-family: 'Segoe UI';
+  font-size: 1em;
+  text-align: justify;
+  font-style: initial;
+  line-height: 2em;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-weight: 500;
+
+}
