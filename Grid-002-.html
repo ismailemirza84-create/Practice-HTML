@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Columns with Images</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      img {
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        object-fit: cover;
+        transition: transform 0.6s ease, box-shadow 0.6s ease, filter 0.6s ease;
+        filter: grayscale(100%) contrast(0.95);
+      }
+
+      /* Golden glow on hover */
+      img:hover {
+        transform: scale(1.07); /* smooth zoom-in */
+        box-shadow: 0 0 35px 10px rgba(255, 215, 0, 0.6); /* gold glow */
+        filter: brightness(1.1) saturate(1.2); /* make it shine more */
+      }
+
+      .col-content {
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+      }
+      .img {
+        width: 350px;
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="#emirates">Emirates,</a>
+      <a href="#kuwait">Kuwait</a>
+    </div>
+    <div class="container-fluid">
+      <!-- Row 1 -->
+      <div class="row mb-0">
+        <div class="col-md-4 bg-primary p-3">
+          <div id="emirates" class="col-content">Emirates Airways</div>
+          <img src="img/emirates-airways.webp" alt="Emirates Airways" />
+        </div>
+        <div class="col-md-4 bg-success p-3">
+          <div id="kuwait" class="col-content">Kuwait Airways</div>
+          <img src="img/kuwait-airways.jpg" alt="Kuwait Airways" />
+        </div>
+        <div class="col-md-4 bg-warning p-3">
+          <div class="col-content">ingapore Airlines</div>
+          <img src="img/singapore-airlines.webp" alt="Singapore Airlines" />
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="row">
+        <div class="col-md-4 bg-warning p-3">
+          <div class="col-content">Air India Express</div>
+          <img src="img/air-india-express.webp" alt="Air India Express" />
+        </div>
+        <div class="col-md-4 bg-info p-3">
+          <div class="col-content">Etihad Airways</div>
+          <img src="img/etihad-airways.webp" alt="Etihad Airways" />
+        </div>
+        <div class="col-md-4 bg-danger p-3">
+          <div class="col-content">Qatar Airways</div>
+          <img src="img/Qatar-Airways.jpg" alt="Qatar Airways" />
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="row mt-1">
+        <div class="col-sm-6 bg-primary p-3">
+          <div class="col-content">Turkish Airlines</div>
+          <img src="img/Turkish-Airlines.webp" alt="Turkish Airlines" />
+        </div>
+        <div class="col-sm-6 bg-info p-3">
+          <div class="col-content">Lufthansa Airlines</div>
+          <img src="img/Lufthansa-airlines.webp" alt="Lufthansa Airlines" />
+        </div>
+      </div>
+
+      <!-- Row 4 -->
+      <div class="row mt-1">
+        <div class="col-sm-4 bg-warning p-3">
+          <div class="col-content">British Airways</div>
+          <img src="img/British_Airways.jpg" alt="British Airways" />
+        </div>
+        <div class="col-sm-4 bg-info p-3">
+          <div class="col-content">Air France</div>
+          <img src="img/Air France.jpg" alt="Air France" />
+        </div>
+        <div class="col-sm-4 bg-danger p-3">
+          <div class="col-content">Saudia Airlines</div>
+          <img src="img/Saudi-Airlines.jpg" class="img" alt="Saudia Airlines" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
