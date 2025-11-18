@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAWAKKUL Fancy Store</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary-dark: #0c151e;
+        --secondary-dark: #2e70a3;
+        --accent-bold: #f6d204;
+        --text-light: #ecf0f1;
+        --text-muted: #bdc3c7;
+        --footer-dark: #212f3d;
+      }
+
+      body {
+        background-color: var(--text-light);
+        color: var(--primary-dark);
+        font-family: "Arial", sans-serif;
+      }
+
+      .navbar {
+        background-color: var(--primary-dark);
+        border-bottom: 1px solid var(--accent-bold);
+        padding: 0px;
+      }
+
+      .navbar-brand,
+      .nav-link {
+        color: var(--text-light) !important;
+        font-weight: bold;
+      }
+
+      .navbar-brand:hover,
+      .nav-link:hover {
+        color: var(--accent-bold) !important;
+      }
+
+      /* Carousel Image Size */
+      .carousel-item img {
+        height: 400px;
+        object-fit: cover;
+      }
+
+      .header-section {
+        background-color: var(--secondary-dark);
+        color: var(--text-light);
+        padding: 30px 0;
+        text-align: center;
+      }
+
+      .header-section h3 {
+        font-size: 35px;
+        margin-bottom: 10px;
+        color: var(--accent-bold);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .section-heading {
+        color: var(--primary-dark);
+        margin-bottom: 20px;
+        font-weight: bold;
+        position: relative;
+        padding-bottom: 5px;
+      }
+
+      .section-heading::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 80px;
+        height: 5px;
+        background-color: var(--accent-bold);
+      }
+
+      .card {
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      footer {
+        background-color: var(--footer-dark);
+        color: var(--text-muted);
+        padding: 40px 0;
+        margin-top: 50px;
+        font-size: 0.9rem;
+      }
+
+      footer a {
+        color: var(--accent-bold);
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        color: var(--text-light);
+      }
+      .section-heading {
+        margin: 20px;
+      }
+      .card-header {
+        font-weight: 600;
+        background-color: #e0dfdd;
+        text-align: center;
+        border-radius: 30px;
+      }
+      .header5 {
+        font-weight: 600;
+        background-color: #e0dfdd;
+        text-align: center;
+        border-radius: 30px;
+      }
+      .imgsize {
+        width: 410px;
+        height: 380px;
+        /* border-radius: 30px; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo-usa.avif" width="70" height="50" alt="" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About-USA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Cities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== CAROUSEL WITH PROFESSIONAL USA IMAGES ===== -->
+    <div id="tawakkulCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#tawakkulCarousel"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#tawakkulCarousel"
+          data-bs-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#tawakkulCarousel"
+          data-bs-slide-to="2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#tawakkulCarousel"
+          data-bs-slide-to="3"
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img
+            src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80"
+            class="d-block w-100"
+          />
+        </div>
+
+        <div class="carousel-item" data-bs-interval="3000">
+          <img
+            src="https://images.unsplash.com/photo-1534644606830-7f9af2b6f16b?auto=format&fit=crop&w=1200&q=80"
+            class="d-block w-100"
+          />
+        </div>
+
+        <div class="carousel-item" data-bs-interval="3000">
+          <img
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+            class="d-block w-100"
+          />
+        </div>
+
+        <div class="carousel-item" data-bs-interval="3000">
+          <img
+            src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1200&q=80"
+            class="d-block w-100"
+          />
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#tawakkulCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#tawakkulCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- ===== HEADER SECTION ===== -->
+    <header class="header-section">
+      <div class="container">
+        <h3>United States of America - Land of Opportunities</h3>
+        <p class="lead">
+          The United States - A Global Leader in Culture & Tourism
+        </p>
+      </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+      <div class="container">
+        <!-- ABOUT -->
+        <section id="about" class="mb-5">
+          <h2 class="section-heading">About USA</h2>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <p>
+                The United States of America (USA) is a large and diverse
+                country made up of 50 states, known for its powerful economy,
+                advanced technology, and global influence. It has a variety of
+                landscapes—from skyscraper cities like New York to natural
+                wonders like the Grand Canyon. The USA is also famous for its
+                rich culture, entertainment industry, world-class education, and
+                innovation.
+              </p>
+            </div>
+
+            <div class="col-lg-6">
+              <video
+                controls
+                src="videos only/usa-Video-001.mp4"
+                height="400px"
+                width="400px"
+              ></video>
+            </div>
+          </div>
+        </section>
+
+        <hr />
+
+        <!-- SERVICES -->
+        <section id="services" class="mb-5">
+          <h2 class="section-heading">USA - Cities and Entertainment</h2>
+
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-header">New York City</div>
+                <img class="imgsize" src="img/usa-001-new-york..jpg" alt="" />
+                <div class="card-body">
+                  New York City NY: Known as "The City That Never Sleeps," it's
+                  famous for iconic landmarks like the Statue of Liberty,
+                  Central Park, and the Empire State Building.
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-header">Las Vegas</div>
+                <img class="imgsize" src="img/usa-002-Las Vegas.jpg" alt="" />
+                <div class="card-body">
+                  Las Vegas, NV: The "City of Luck and Fortune" is a top
+                  destination for its vibrant nightlife, entertainment, and
+                  casinos.
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-header">San Francisco</div>
+                <img
+                  class="imgsize"
+                  src="img/usa-003-San Francisco.webp"
+                  alt=""
+                />
+                <div class="card-body">
+                  San Francisco, CA: The "Golden Gate City" is celebrated for
+                  the Golden Gate Bridge, Alcatraz Island, and cultural
+                  diversity.
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-header">Grand Canyon National Park, AZ</div>
+                <img
+                  class="imgsize"
+                  src="img/usa-004-Grand Canyon National Park,.jpg"
+                  alt=""
+                />
+                <div class="card-body">
+                  Grand Canyon National Park, AZ: A breathtaking natural wonder
+                  offering stunning views and hiking.
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-header">Yosemite National Park, CA</div>
+                <img
+                  class="imgsize"
+                  src="img/usa-005-Yosemite National Park,.webp"
+                  alt=""
+                />
+                <div class="card-body">
+                  Yosemite National Park: Famous for giant sequoia trees,
+                  dramatic cliffs, and waterfalls.
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-header">Orlando, FL</div>
+                <img class="imgsize" src="img/usa-006-Orlando, FL.jpg" alt="" />
+                <div class="card-body">
+                  Orlando, FL: The "Theme Park Capital of the World," including
+                  Disney World & Universal Studios.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr />
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio" class="mb-5">
+          <h2 class="section-heading">
+            Our Portfolio for American Tourist Places
+          </h2>
+
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  class="imgsize"
+                  src="img/usa-007-New York.webp"
+                  class="card-img-top"
+                  alt=""
+                />
+                <div class="card-body">
+                  <h5 class="header5">New York, NY</h5>
+                  <p class="text-muted">
+                    New York, NY—where city lights, culture, and history come
+                    alive.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  class="imgsize"
+                  src="img/usa-008-Las Vegas.jpg"
+                  class="card-img-top"
+                  alt=""
+                />
+                <div class="card-body">
+                  <h5 class="header5">Las Vegas</h5>
+                  <p class="text-muted">
+                    Las Vegas — Where nightlife, style, and adventure shine
+                    brightest.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  class="imgsize"
+                  src="img/usa-009-Chicago.jpg"
+                  class="card-img-top"
+                  alt=""
+                />
+                <div class="card-body">
+                  <h5 class="header5">Chicago, IL</h5>
+                  <p class="text-muted">
+                    A perfect blend of architecture, culture, and city charm.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr />
+
+        <!-- CONTACT -->
+        <section id="contact" class="mb-5 bg-info">
+          <h2 class="section-heading">Contact Us</h2>
+
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <form>
+                <div class="mb-3">
+                  <label class="form-label">Full Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Your Name"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">E-mail</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="name@example.com"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    rows="5"
+                    placeholder="Your Message"
+                  ></textarea>
+                </div>
+
+                <button class="btn btn-warning">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer-from Next-line -->
+    <!-- ===== SIMPLE USA THEME FOOTER ===== -->
+    <footer
+      style="
+        background: #0c151e;
+        color: #bdc3c7;
+        padding: 35px 0;
+        margin-top: 40px;
+      "
+    >
+      <div class="container text-center">
+        <h4 style="color: #f6d204; font-weight: bold; letter-spacing: 1px">
+          United States of America – Discover the Land of Freedom
+        </h4>
+
+        <p style="max-width: 600px; margin: 12px auto 20px; font-size: 0.95rem">
+          Explore the beauty, culture, and iconic landmarks of the USA — from
+          New York to California, a nation of innovation, diversity, and
+          unforgettable places.
+        </p>
+
+        <div style="margin-bottom: 15px">
+          <a href="#about" class="text-decoration-none text-light mx-2"
+            >About USA</a
+          >
+          <a href="#services" class="text-decoration-none text-light mx-2"
+            >Cities</a
+          >
+          <a href="#portfolio" class="text-decoration-none text-light mx-2"
+            >Tourist Spots</a
+          >
+          <a href="#contact" class="text-decoration-none text-light mx-2"
+            >Contact</a
+          >
+        </div>
+
+        <hr style="border-color: #444; width: 80%; margin: 15px auto" />
+
+        <p class="mb-0" style="font-size: 0.85rem; color: #ccc">
+          © 2025 USA Tourism Showcase • All Rights Reserved, Designed By : Mirza
+          Ismail, Contact : 0091-7975509484
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
