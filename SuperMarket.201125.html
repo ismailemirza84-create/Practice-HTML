@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Market</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #f4f6f8;
+        color: #333;
+      }
+      h1 {
+        color: bisque;
+        font-size: 60px;
+      }
+
+      /* NAVBAR */
+      nav {
+        background: rgb(60, 127, 154);
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-radius: 20px;
+      }
+
+      nav h2 {
+        color: white;
+        font-size: 26px;
+        font-weight: 600;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      nav ul li a:hover {
+        color: #ffe600;
+      }
+
+      /* HEADER */
+      .header {
+        height: 65vh;
+        background: url(Img/super-Market-BG-01.png);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      .header h1 {
+        font-size: 48px;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px 30px;
+        border-radius: 20px;
+      }
+
+      /* GALLERY */
+      .gallery {
+        padding: 50px 20px;
+        text-align: center;
+      }
+
+      .gallery h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .gallery-grid img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .gallery-grid img:hover {
+        transform: scale(1.05);
+      }
+
+      /* MODAL POPUP */
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .modal-content {
+        max-width: 600px;
+        text-align: center;
+      }
+
+      .modal-content img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+
+      .close {
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      /* ABOUT */
+      .about-us {
+        font-size: 35px;
+        padding: 15px;
+        background: #ffffff;
+        border: 2px solid black;
+        border-radius: 20px;
+        background: skyblue;
+        text-align: center;
+      }
+
+      .ol {
+        font-size: 20px;
+        padding: 30px;
+        margin: 10px;
+      }
+
+      /* CONTACT */
+      .contact {
+        padding: 50px 20px;
+        background: rgb(60, 127, 154);
+        color: white;
+        text-align: center;
+        border-radius: 20px;
+      }
+
+      /* RESPONSIVE NAV MENU */
+      @media (max-width: 768px) {
+        nav ul {
+          display: none;
+        }
+      }
+      .product-name {
+        font-size: 25px;
+        padding: 10px;
+        /* margin: 5px; */
+        font-weight: bold;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .product-offer {
+        color: brown;
+        font-size: 25px;
+        padding: 10px;
+        /* margin: 5px; */
+        font-weight: bold;
+      }
+      .product-heading {
+        font-size: 35px;
+        padding: 10px;
+        background: #ffffff;
+        border: 2px solid black;
+        border-radius: 20px;
+        background: skyblue;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <h2>
+        <img
+          src="Img/shiroor-super-market-logo.jpg"
+          height="70px"
+          width="150px"
+          alt=""
+        />
+      </h2>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#gallery">Products</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1>Welcome to Shiroor Super Market</h1>
+    </div>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="gallery">
+      <h2 class="product-heading">Products Lists</h2>
+
+      <div class="gallery-grid">
+        <div>
+          <div class="product-name">Fresh Vegitables</div>
+          <div class="product-offer">20 % Off</div>
+          <img src="Img/hypermarket-01.png" alt="" />
+        </div>
+        <div>
+          <div class="product-name">Cooking Oils</div>
+          <div class="product-offer">20 % Off</div>
+          <img src="Img/hypermarket-cooking-oil-02.png" alt="" />
+        </div>
+        <div>
+          <div class="product-name">Fresh Juice</div>
+          <div class="product-offer">20 % Off</div>
+          <img src="Img/hypermarket-juice-03.png" alt="" />
+        </div>
+        <div>
+          <div class="product-name">Rice Pkts Branded</div>
+          <div class="product-offer">20 % Off</div>
+
+          <img src="Img/hypermarket-rice-04.png" alt="" />
+        </div>
+        <div>
+          <div class="product-name">Rice Loose</div>
+          <div class="product-offer">20 % Off</div>
+          <img src="Img/hypermarket-loose-rice-05.png" alt="" />
+        </div>
+        <div>
+          <div class="product-name">Dry Fruits</div>
+          <div class="product-offer">20 % Off</div>
+
+          <img src="img/Glass-Dry-Fruits-06.png" alt="" />
+        </div>
+        <div>
+          <div class="product-name">Indian Masala</div>
+          <div class="product-offer">20 % Off</div>
+          <img src="Img/hypermarket-masale-07.png" alt="" />
+        </div>
+        <div>
+          <div class="product-name">Milk Products</div>
+          <div class="product-offer">20 % Off</div>
+          <img src="Img/hypermarket-milk-powder-08.png" alt="" />
+        </div>
+        <div>
+          <div class="product-name">Body Care</div>
+          <div class="product-offer">20 % Off</div>
+          <img src="Img/hypermarket-body-care-09.png" alt="" />
+        </div>
+        <div>
+          <div class="product-name">Baby Diapers</div>
+          <div class="product-offer">20 % Off</div>
+          <img src="Img/hypermarket-baby-care-010.png" alt="" />
+        </div>
+        <div>
+          <div class="product-name">Baby Care</div>
+          <div class="product-offer">20 % Off</div>
+          <img src="Img/hypermarket-baby-care-011.png" alt="" />
+        </div>
+        <div>
+          <div class="product-name">Born Baby Cloths</div>
+          <div class="product-offer">20 % Off</div>
+          <img src="Img/hypermarkets-baby-cloths-012.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2 class="about-us">About Us</h2>
+      <br />
+      <ol class="ol">
+        <li>
+          Welcome to Professional Super Market, Shiroor, your trusted
+          destination for daily essentials.
+        </li>
+        <li>
+          We bring you farm-fresh vegetables sourced directly from local growers
+          every morning.
+        </li>
+        <li>
+          Our baby care section offers safe, premium, and dermatologist-approved
+          products for your little ones.
+        </li>
+        <li>
+          Discover a wide range of body care essentials to keep you refreshed
+          and confident every day.
+        </li>
+        <li>
+          Choose from our handpicked collection of high-quality dry fruits,
+          perfect for health and gifting.
+        </li>
+        <li>
+          We provide top-grade rice varieties, ensuring purity, aroma, and
+          excellent taste in every grain.
+        </li>
+        <li>
+          Our shelves are stocked with branded groceries that meet the highest
+          standards of quality.
+        </li>
+        <li>
+          Enjoy a clean, organized, and fully air-conditioned shopping
+          environment for your comfort.
+        </li>
+        <li>
+          With friendly staff and quick service, we ensure a smooth and
+          satisfying shopping experience.
+        </li>
+        <li>
+          Visit us today and feel the difference — quality, freshness, and value
+          under one roof.
+        </li>
+      </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <br />
+      <p><i class="fa-solid fa-phone"></i> Phone: +91 7975509484</p>
+      <p>
+        <i class="fa-solid fa-location-dot"></i> Address: MGM Complex, Market
+        Shiroor,
+      </p>
+      <p><i class="fa-solid fa-envelope"></i> Email: supermarket@gmail.com</p>
+    </section>
+
+    <script>
+      function openModal(images) {
+        const modal = document.getElementById("modal");
+        const modalContent = document.getElementById("modal-content");
+
+        modalContent.innerHTML = images
+          .map((img) => `<img src='${img}'>`)
+          .join("");
+
+        modal.style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
